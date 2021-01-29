@@ -37,6 +37,7 @@
       <a href="#development">Development</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#build">Build</a></li>
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
@@ -149,6 +150,14 @@ git clone https://github.com/corentind59/expressive.git
 ```shell
 yarn
 ```
+
+### Build
+
+```shell
+yarn build
+```
+
+The project output will be generated in the `dist` folder.
 
 ## Contributing
 

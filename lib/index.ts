@@ -1,4 +1,4 @@
-import { responseMiddleware as expressive } from './middleware';
+import { expressiveMiddleware as expressive } from './middleware';
 
 export * from './handler';
 export * from './responses';

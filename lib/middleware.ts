@@ -1,7 +1,12 @@
 import { ErrorRequestHandler } from 'express';
 import { HttpResponse, InternalServerError } from './responses';
 
-export function responseMiddleware(): ErrorRequestHandler {
+/**
+ * Middleware handling controller functions and returned {@link HttpResponse}.
+ *
+ * This middleware must be the last in the middlewares chain, as it is implemented as an {@link ErrorRequestHandler}.
+ */
+export function expressiveMiddleware(): ErrorRequestHandler {
   return ((err, req, res, next) => {
     if (err instanceof HttpResponse) {
       res.status(err.status);
@@ -17,7 +22,7 @@ export function responseMiddleware(): ErrorRequestHandler {
       }
     } else {
       console.error(err);
-      return responseMiddleware()(new InternalServerError(), req, res, next);
+      return expressiveMiddleware()(new InternalServerError(), req, res, next);
     }
   });
 }
