@@ -1,6 +1,6 @@
 {
   "name": "@corentind/expressive",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An express middleware that elegantly handles async controllers and errors management",
   "main": "dist/index.js",
   "keywords": [
